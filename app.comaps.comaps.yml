@@ -51,7 +51,4 @@ modules:
       - type: shell
         commands:
           - SKIP_MAP_DOWNLOAD=1 ./configure.sh
-          - for s in {32,64,128,256,512}; do ffmpeg -i qt/res/logo.png
-            -s "${s}x${s}" -update true "qt/res/logo_${s}x${s}.png";
-            install -Dm644 "qt/res/logo_${s}x${s}.png" "${FLATPAK_DEST}/share/icons/hicolor/${s}x${s}/apps/${FLATPAK_ID}.png";
-            done;
+          - install -Dm644 "qt/res/logo.png" "${FLATPAK_DEST}/share/icons/hicolor/512x512/apps/${FLATPAK_ID}.png"
