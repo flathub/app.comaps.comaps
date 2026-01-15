@@ -1,6 +1,6 @@
 app-id: app.comaps.comaps
 runtime: org.kde.Platform
-runtime-version: '6.9'
+runtime-version: '6.10'
 sdk: org.kde.Sdk
 command: CoMaps
 finish-args:
@@ -43,11 +43,15 @@ modules:
     sources:
       - type: git
         url: https://codeberg.org/comaps/comaps
-        tag: 2025.08.10-linux
-        commit: 1e358375c6704357c4b0eaaf9bc3a08fd3feb9fe
+        tag: v2026.01.08-11
+      - type: patch
+        path: ./lto.patch
       - type: patch
         path: ./disable-world-feed-integration-test.patch
       - type: shell
         commands:
           - SKIP_MAP_DOWNLOAD=1 ./configure.sh
-          - install -Dm644 "qt/res/logo.png" "${FLATPAK_DEST}/share/icons/hicolor/${s}x${s}/apps/${FLATPAK_ID}.png"
+          - for s in {32,64,128,256,512}; do ffmpeg -i qt/res/logo.png
+            -s "${s}x${s}" -update true "qt/res/logo_${s}x${s}.png";
+            install -Dm644 "qt/res/logo_${s}x${s}.png" "${FLATPAK_DEST}/share/icons/hicolor/${s}x${s}/apps/${FLATPAK_ID}.png";
+            done;
