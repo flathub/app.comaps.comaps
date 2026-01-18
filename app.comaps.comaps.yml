@@ -11,6 +11,9 @@ finish-args:
   - --device=dri
   - --system-talk-name=org.freedesktop.GeoClue2.*
 
+cleanup:
+  - '*.a'
+
 modules:
   - name: optipng
     cleanup:
@@ -38,7 +41,6 @@ modules:
     config-opts:
       - -DCMAKE_BUILD_TYPE=Release
     cleanup:
-      - '/lib' # static libraries and build configs
       - '/include'
     sources:
       - type: git
