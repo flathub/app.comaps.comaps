@@ -8,6 +8,7 @@ index 38c297395..b8f40fb78 100644
    if (NOT MSVC)
 -    add_compile_options(-O3 $<$<CXX_COMPILER_ID:GNU>:-flto=auto>)
 +    add_compile_options(-O3)
++    set (CMAKE_INTERPROCEDURAL_OPTIMIZATION True)
    endif()
  else()
    message(FATAL_ERROR "Unknown build type: " ${CMAKE_BUILD_TYPE})
