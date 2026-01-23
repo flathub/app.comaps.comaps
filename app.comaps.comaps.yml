@@ -52,7 +52,15 @@ modules:
         path: ./lto.patch
       - type: patch
         path: ./disable-world-feed-integration-test.patch
+      - type: file
+        url: https://cdn-fi-1.comaps.app/maps/260106/World.mwm
+        sha256: ebee92d06f1d926cd649ead80b6d2bff83bd0cabd8acbb32b0afbbb4cc705ca8
+        dest: data/world_mwm/260106/
+      - type: file
+        url: https://cdn-fi-1.comaps.app/maps/260106/WorldCoasts.mwm
+        sha256: 58b514816db8ae88cbd5992146f285b79711243059b6e918bd83d7f8772a50bb
+        dest: data/world_mwm/260106/
       - type: shell
         commands:
-          - SKIP_MAP_DOWNLOAD=1 ./configure.sh
+          - ./configure.sh
           - install -Dm644 "qt/res/logo.png" "${FLATPAK_DEST}/share/icons/hicolor/512x512/apps/${FLATPAK_ID}.png"
