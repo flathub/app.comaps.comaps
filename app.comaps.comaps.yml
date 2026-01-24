@@ -43,7 +43,7 @@ modules:
     cleanup:
       - '/include'
     post-install:
-      - install -Dm644 "qt/res/logo.png" "${FLATPAK_DEST}/share/icons/hicolor/512x512/apps/${FLATPAK_ID}.png"
+      - install -Dm644 "../qt/res/logo.png" "${FLATPAK_DEST}/share/icons/hicolor/512x512/apps/${FLATPAK_ID}.png"
       - desktop-file-edit "${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop" --set-icon=${FLATPAK_ID}
     sources:
       - type: git
