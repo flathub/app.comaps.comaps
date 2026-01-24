@@ -48,6 +48,7 @@ modules:
     sources:
       - type: git
         url: https://codeberg.org/comaps/comaps
+        commit: 080643d8487b0d601c2c07b0ee2e4740a2e30b74
         tag: v2026.01.08-11
       - type: patch
         path: ./lto.patch
