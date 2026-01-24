@@ -1,8 +1,8 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 38c297395..b8f40fb78 100644
+index 38c297395..ced10a5f7 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -104,7 +104,7 @@ if (${CMAKE_BUILD_TYPE} STREQUAL "Debug")
+@@ -104,7 +104,8 @@ if (${CMAKE_BUILD_TYPE} STREQUAL "Debug")
  elseif (${CMAKE_BUILD_TYPE} MATCHES "Rel")
    add_definitions(-DRELEASE)
    if (NOT MSVC)
