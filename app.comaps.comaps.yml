@@ -54,7 +54,7 @@ modules:
         path: ./disable-world-feed-integration-test.patch
       - type: file
         url: https://cdn-fi-1.comaps.app/maps/260122/World.mwm
-        sha256: 45522d0fbfc46091fb44ff99f14aaf867daa1ea674ce2c8998e99fc845a254c5 
+        sha256: 45522d0fbfc46091fb44ff99f14aaf867daa1ea674ce2c8998e99fc845a254c5
         dest: data/world_mwm/260122/
       - type: file
         url: https://cdn-fi-1.comaps.app/maps/260122/WorldCoasts.mwm
