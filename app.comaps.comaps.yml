@@ -28,8 +28,7 @@ modules:
     cleanup:
       - '*'
     build-commands:
-      - pip3 install --no-index --no-build-isolation --prefix="${FLATPAK_DEST}"
-        .
+      - pip3 install --no-index --no-build-isolation --prefix="${FLATPAK_DEST}" .
     sources:
       - type: archive
         url: https://files.pythonhosted.org/packages/55/5b/e3d951e34f8356e5feecacd12a8e3b258a1da6d9a03ad1770f28925f29bc/protobuf-3.20.3.tar.gz
