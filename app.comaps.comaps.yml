@@ -42,12 +42,13 @@ modules:
       - -DCMAKE_BUILD_TYPE=Release
     post-install:
       - install -Dm644 "../qt/res/logo.png" "${FLATPAK_DEST}/share/icons/hicolor/512x512/apps/${FLATPAK_ID}.png"
+      - install -Dm644 "../qt/res/logo-scalable.svg" "${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg"
       - desktop-file-edit "${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop" --set-icon=${FLATPAK_ID}
     sources:
       - type: git
         url: https://codeberg.org/comaps/comaps
-        commit: 95f58cea421a39ed072a3eba7601a9d4854a8d23
-        tag: v2026.01.24-5
+        commit: 3259e6cf00d8acf0658a97f23f8ed56a48d34100
+        tag: v2026.01.29-2-Linux
       - type: patch
         path: ./disable-world-feed-integration-test.patch
       - type: file
