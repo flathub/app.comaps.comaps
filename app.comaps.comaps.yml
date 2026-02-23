@@ -47,8 +47,8 @@ modules:
     sources:
       - type: git
         url: https://codeberg.org/comaps/comaps
-        commit: 29e12ecd6e70c48a952361bfec6311d8e1793591
-        tag: v2026.02.23-6
+        commit: d6eca2baf9f86853c61ff7e5b1e0ce8bafb3df36
+        tag: v2026.02.23-9
       - type: patch
         path: ./disable-world-feed-integration-test.patch
       - type: file
