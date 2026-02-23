@@ -47,18 +47,18 @@ modules:
     sources:
       - type: git
         url: https://codeberg.org/comaps/comaps
-        commit: bc36fd9975c350d64c44802db6586f07ce47b87a
-        tag: v2026.02.09-4-Linux
+        commit: 29e12ecd6e70c48a952361bfec6311d8e1793591
+        tag: v2026.02.23-6
       - type: patch
         path: ./disable-world-feed-integration-test.patch
       - type: file
-        url: https://cdn-fi-1.comaps.app/maps/260207/World.mwm
-        sha256: e923216282abbcd7bcb4e9736a300290de2b9ab7378627b786563762a6895994
-        dest: data/world_mwm/260207/
+        url: https://cdn-fi-1.comaps.app/maps/260221/World.mwm
+        sha256: 57adb20b55ea395c46b741a8c5def6a8e48d8cf2e29fecc88f17763d738571cd
+        dest: data/world_mwm/260221/
       - type: file
-        url: https://cdn-fi-1.comaps.app/maps/260207/WorldCoasts.mwm
-        sha256: d04355c3873fd81800f348d780d012bb64544dc3bf0968a60c502c9a4aa6aad1
-        dest: data/world_mwm/260207/
+        url: https://cdn-fi-1.comaps.app/maps/260221/WorldCoasts.mwm
+        sha256: c06070c6a977d34eaf31ca7ea405fc0985ab9e0e5a3efa8695b996fa192e96f0
+        dest: data/world_mwm/260221/
       - type: shell
         commands:
           - ./configure.sh
