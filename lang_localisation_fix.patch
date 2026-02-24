@@ -1,0 +1,13 @@
+diff --git a/libs/transit/world_feed/world_feed.cpp b/libs/transit/world_feed/world_feed.cpp
+index 05ebc681b..008711d51 100644
+--- a/libs/transit/world_feed/world_feed.cpp
++++ b/libs/transit/world_feed/world_feed.cpp
+@@ -491,7 +491,7 @@ bool WorldFeed::SetFeedLanguage()
+   strings::AsciiToLower(m_feedLanguage);
+ 
+   StringUtf8Multilang multilang;
+-  if (multilang.GetLangIndex(m_feedLanguage) != StringUtf8Multilang::kUnsupportedLanguageCode)
++  if (localisation::ConvertLanguageCodeToLanguageIndex(m_feedLanguage) != localisation::kUnsupportedLanguageIndex)
+     return true;
+ 
+   LOG(LINFO, ("Unsupported language:", m_feedLanguage));
