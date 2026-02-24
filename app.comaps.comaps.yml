@@ -52,6 +52,10 @@ modules:
         commit: d6eca2baf9f86853c61ff7e5b1e0ce8bafb3df36
         tag: v2026.02.23-9
       - type: patch
+        path: ./lang_localisation_fix.patch
+      - type: patch
+        path: ./skip_search_tests_support.patch
+      - type: patch
         path: ./disable-world-feed-integration-test.patch
       - type: file
         url: https://cdn-fi-1.comaps.app/maps/260221/World.mwm
