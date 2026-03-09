@@ -51,8 +51,6 @@ modules:
         url: https://codeberg.org/comaps/comaps
         commit: 4707a028f993036292233e9dc731c88a3a22fe9e
         tag: v2026.03.09-18
-      - type: patch
-        path: ./disable-world-feed-integration-test.patch
       - type: file
         url: https://cdn-fi-1.comaps.app/maps/260307/World.mwm
         sha256: 3a8cea0d2138b543f537acb7c57312dd9a8606e466e4e527efb6bdaa4b23c26b
