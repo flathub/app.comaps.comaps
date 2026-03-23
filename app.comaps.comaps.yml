@@ -49,16 +49,16 @@ modules:
     sources:
       - type: git
         url: https://codeberg.org/comaps/comaps
-        commit: 4707a028f993036292233e9dc731c88a3a22fe9e
-        tag: v2026.03.09-18
+        commit: d4c01a769d3fa7f57c9aad2959d4b14163cd506f
+        tag: v2026.03.23-5
       - type: file
-        url: https://cdn-fi-1.comaps.app/maps/260307/World.mwm
-        sha256: 3a8cea0d2138b543f537acb7c57312dd9a8606e466e4e527efb6bdaa4b23c26b
-        dest: data/world_mwm/260307/
+        url: https://cdn-fi-1.comaps.app/maps/260321/World.mwm
+        sha256: a4c9b33dc59b4bd76b4332427e269cd9d7d23228621c37e11721b9bb1d291b9e
+        dest: data/world_mwm/260321/
       - type: file
-        url: https://cdn-fi-1.comaps.app/maps/260307/WorldCoasts.mwm
-        sha256: 681735db6f0efb3f532a66e9a4a2ee9242373c6a1a4509476f0457e058d6aff4
-        dest: data/world_mwm/260307/
+        url: https://cdn-fi-1.comaps.app/maps/260321/WorldCoasts.mwm
+        sha256: e4b23a8ad0ba2e1a6b55f8066d3fc7632d65cd92d92d47b64284a2974ffb9087
+        dest: data/world_mwm/260321/
       - type: shell
         commands:
           - ./configure.sh
