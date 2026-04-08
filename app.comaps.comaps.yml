@@ -43,6 +43,9 @@ modules:
       - -DSKIP_TESTS=1
       - -DSKIP_TOOLS=1
     post-install:
+      - mkdir -p "${FLATPAK_DEST}/share/comaps/data/world_mwm/260405"
+      - install -Dm644 "../data/world_mwm/260405/WorldCoasts.mwm" "${FLATPAK_DEST}/share/comaps/data/world_mwm/260405/"
+      - install -Dm644 "../data/world_mwm/260405/World.mwm" "${FLATPAK_DEST}/share/comaps/data/world_mwm/260405/"
       - install -Dm644 "../qt/res/logo.png" "${FLATPAK_DEST}/share/icons/hicolor/512x512/apps/${FLATPAK_ID}.png"
       - install -Dm644 "../qt/res/logo-scalable.svg" "${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg"
       - desktop-file-edit "${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop" --set-icon=${FLATPAK_ID}
