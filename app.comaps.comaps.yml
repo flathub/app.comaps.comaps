@@ -43,25 +43,25 @@ modules:
       - -DSKIP_TESTS=1
       - -DSKIP_TOOLS=1
     post-install:
-      - mkdir -p "${FLATPAK_DEST}/share/comaps/data/world_mwm/260405"
-      - install -Dm644 "../data/world_mwm/260405/WorldCoasts.mwm" "${FLATPAK_DEST}/share/comaps/data/world_mwm/260405/"
-      - install -Dm644 "../data/world_mwm/260405/World.mwm" "${FLATPAK_DEST}/share/comaps/data/world_mwm/260405/"
+      - mkdir -p "${FLATPAK_DEST}/share/comaps/data/world_mwm/260421"
+      - install -Dm644 "../data/world_mwm/260421/WorldCoasts.mwm" "${FLATPAK_DEST}/share/comaps/data/world_mwm/260421/"
+      - install -Dm644 "../data/world_mwm/260421/World.mwm" "${FLATPAK_DEST}/share/comaps/data/world_mwm/260421/"
       - install -Dm644 "../qt/res/logo.png" "${FLATPAK_DEST}/share/icons/hicolor/512x512/apps/${FLATPAK_ID}.png"
       - install -Dm644 "../qt/res/logo-scalable.svg" "${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg"
       - desktop-file-edit "${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop" --set-icon=${FLATPAK_ID}
     sources:
       - type: git
         url: https://codeberg.org/comaps/comaps
-        commit: fa6cc98bc894f9aa1ad5e87b53acca2e76d6e00e
-        tag: v2026.04.07-8
+        commit: 33dddf9c92a958c062c5a0559c24ed57a3554f42
+        tag: v2026.04.23-19
       - type: file
-        url: https://cdn-fi-1.comaps.app/maps/260405/World.mwm
-        sha256: 6ee0f7be132895b2cbb350a569ceddfb1eb9f6cf8045bf06b3f9dc0835de6ac2
-        dest: data/world_mwm/260405/
+        url: https://cdn-fi-1.comaps.app/maps/260421/World.mwm
+        sha256: 3c186fc099f0e123bb384a6bf61764abae5c4c2aa9e7cec7592f1a2abdb404c2
+        dest: data/world_mwm/260421/
       - type: file
-        url: https://cdn-fi-1.comaps.app/maps/260405/WorldCoasts.mwm
-        sha256: 5a1b573696057250e148afa21b6b01324281322b443d1f584943289a82a05850
-        dest: data/world_mwm/260405/
+        url: https://cdn-fi-1.comaps.app/maps/260421/WorldCoasts.mwm
+        sha256: fac2be39dda3ff223045dacddef71bae2b68ff5a162a6aebc161e1e1a63598d1
+        dest: data/world_mwm/260421/
       - type: shell
         commands:
           - ./configure.sh
