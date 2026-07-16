@@ -43,9 +43,9 @@ modules:
       - -DSKIP_TESTS=1
       - -DSKIP_TOOLS=1
     post-install:
-      - mkdir -p "${FLATPAK_DEST}/share/comaps/data/world_mwm/260603"
-      - install -Dm644 "../data/world_mwm/260603/WorldCoasts.mwm" "${FLATPAK_DEST}/share/comaps/data/world_mwm/260603/"
-      - install -Dm644 "../data/world_mwm/260603/World.mwm" "${FLATPAK_DEST}/share/comaps/data/world_mwm/260603/"
+      - mkdir -p "${FLATPAK_DEST}/share/comaps/data/world_mwm/260714"
+      - install -Dm644 "../data/world_mwm/260714/WorldCoasts.mwm" "${FLATPAK_DEST}/share/comaps/data/world_mwm/260714/"
+      - install -Dm644 "../data/world_mwm/260714/World.mwm" "${FLATPAK_DEST}/share/comaps/data/world_mwm/260714/"
       - install -Dm644 "../qt/res/logo.png" "${FLATPAK_DEST}/share/icons/hicolor/512x512/apps/${FLATPAK_ID}.png"
       - install -Dm644 "../qt/res/logo-scalable.svg" "${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg"
       - install -Dm644 "../data/categories_brands.txt" "${FLATPAK_DEST}/share/comaps/data/"
@@ -53,16 +53,16 @@ modules:
     sources:
       - type: git
         url: https://codeberg.org/comaps/comaps
-        commit: ec9e508da4fd6a068d5ade9aeec294ff20b36e24
-        tag: v2026.06.05-11
+        commit: 200b9ff11f6216a16d5d3625fb85ab5e9e3b2ddc
+        tag: v2026.07.16-10
       - type: file
-        url: https://cdn-fi-1.comaps.app/maps/260603/World.mwm
+        url: https://cdn-fi-1.comaps.app/maps/260714/World.mwm
         sha256: 3c186fc099f0e123bb384a6bf61764abae5c4c2aa9e7cec7592f1a2abdb404c2
-        dest: data/world_mwm/260603/
+        dest: data/world_mwm/260714/
       - type: file
-        url: https://cdn-fi-1.comaps.app/maps/260603/WorldCoasts.mwm
+        url: https://cdn-fi-1.comaps.app/maps/260714/WorldCoasts.mwm
         sha256: fac2be39dda3ff223045dacddef71bae2b68ff5a162a6aebc161e1e1a63598d1
-        dest: data/world_mwm/260603/
+        dest: data/world_mwm/260714/
       - type: shell
         commands:
           - ./configure.sh
