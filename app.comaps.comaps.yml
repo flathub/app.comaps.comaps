@@ -42,6 +42,7 @@ modules:
       - -DCMAKE_BUILD_TYPE=Release
       - -DSKIP_TESTS=1
       - -DSKIP_TOOLS=1
+      - -DWITH_SYSTEM_PROVIDED_3PARTY=ON
     post-install:
       - mkdir -p "${FLATPAK_DEST}/share/comaps/data/world_mwm/260830"
       - install -Dm644 "../data/world_mwm/260830/WorldCoasts.mwm" "${FLATPAK_DEST}/share/comaps/data/world_mwm/260830/"
