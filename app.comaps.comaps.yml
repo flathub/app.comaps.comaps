@@ -1,6 +1,6 @@
 app-id: app.comaps.comaps
 runtime: org.kde.Platform
-runtime-version: '6.10'
+runtime-version: '6.11'
 sdk: org.kde.Sdk
 command: CoMaps
 finish-args:
@@ -43,9 +43,9 @@ modules:
       - -DSKIP_TESTS=1
       - -DSKIP_TOOLS=1
     post-install:
-      - mkdir -p "${FLATPAK_DEST}/share/comaps/data/world_mwm/260714"
-      - install -Dm644 "../data/world_mwm/260714/WorldCoasts.mwm" "${FLATPAK_DEST}/share/comaps/data/world_mwm/260714/"
-      - install -Dm644 "../data/world_mwm/260714/World.mwm" "${FLATPAK_DEST}/share/comaps/data/world_mwm/260714/"
+      - mkdir -p "${FLATPAK_DEST}/share/comaps/data/world_mwm/260830"
+      - install -Dm644 "../data/world_mwm/260830/WorldCoasts.mwm" "${FLATPAK_DEST}/share/comaps/data/world_mwm/260830/"
+      - install -Dm644 "../data/world_mwm/260830/World.mwm" "${FLATPAK_DEST}/share/comaps/data/world_mwm/260830/"
       - install -Dm644 "../qt/res/logo.png" "${FLATPAK_DEST}/share/icons/hicolor/512x512/apps/${FLATPAK_ID}.png"
       - install -Dm644 "../qt/res/logo-scalable.svg" "${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg"
       - install -Dm644 "../data/categories_brands.txt" "${FLATPAK_DEST}/share/comaps/data/"
@@ -53,16 +53,16 @@ modules:
     sources:
       - type: git
         url: https://codeberg.org/comaps/comaps
-        commit: 200b9ff11f6216a16d5d3625fb85ab5e9e3b2ddc
-        tag: v2026.07.16-10
+        commit: 72632e4de65a98dfed827d8e447f0287168639d0
+        tag: v2026.08.31-14
       - type: file
-        url: https://cdn-fi-1.comaps.app/maps/260714/World.mwm
-        sha256: 3c186fc099f0e123bb384a6bf61764abae5c4c2aa9e7cec7592f1a2abdb404c2
-        dest: data/world_mwm/260714/
+        url: https://cdn-fi-1.comaps.app/maps/2026.06.28/260830/World.mwm
+        sha256: 4dc68624af3102471e03bc05b02ad8b7a7ae3a7b6cd30ecb64228b14f9d4df03
+        dest: data/world_mwm/260830/
       - type: file
-        url: https://cdn-fi-1.comaps.app/maps/260714/WorldCoasts.mwm
-        sha256: fac2be39dda3ff223045dacddef71bae2b68ff5a162a6aebc161e1e1a63598d1
-        dest: data/world_mwm/260714/
+        url: https://cdn-fi-1.comaps.app/maps/2026.06.28/260830/WorldCoasts.mwm
+        sha256: a4d6f470b19137a624962ada2fe0d9c803e1f8925233abd3ce87a378abe2fe87
+        dest: data/world_mwm/260830/
       - type: shell
         commands:
           - ./configure.sh
