@@ -43,9 +43,9 @@ modules:
       - -DSKIP_TESTS=1
       - -DSKIP_TOOLS=1
     post-install:
-      - mkdir -p "${FLATPAK_DEST}/share/comaps/data/world_mwm/260830"
-      - install -Dm644 "../data/world_mwm/260830/WorldCoasts.mwm" "${FLATPAK_DEST}/share/comaps/data/world_mwm/260830/"
-      - install -Dm644 "../data/world_mwm/260830/World.mwm" "${FLATPAK_DEST}/share/comaps/data/world_mwm/260830/"
+      - mkdir -p "${FLATPAK_DEST}/share/comaps/data/world_mwm/261004"
+      - install -Dm644 "../data/world_mwm/261004/WorldCoasts.mwm" "${FLATPAK_DEST}/share/comaps/data/world_mwm/261004/"
+      - install -Dm644 "../data/world_mwm/261004/World.mwm" "${FLATPAK_DEST}/share/comaps/data/world_mwm/261004/"
       - install -Dm644 "../qt/res/logo.png" "${FLATPAK_DEST}/share/icons/hicolor/512x512/apps/${FLATPAK_ID}.png"
       - install -Dm644 "../qt/res/logo-scalable.svg" "${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg"
       - install -Dm644 "../data/categories_brands.txt" "${FLATPAK_DEST}/share/comaps/data/"
@@ -53,16 +53,16 @@ modules:
     sources:
       - type: git
         url: https://codeberg.org/comaps/comaps
-        commit: 72632e4de65a98dfed827d8e447f0287168639d0
-        tag: v2026.08.31-14
+        commit: 7f3b5be834f7f73abca08339b4e56dcaf1b5ec3e
+        tag: v2026.10.05-19
       - type: file
-        url: https://cdn-fi-1.comaps.app/maps/2026.06.28/260830/World.mwm
-        sha256: 4dc68624af3102471e03bc05b02ad8b7a7ae3a7b6cd30ecb64228b14f9d4df03
-        dest: data/world_mwm/260830/
+        url: https://cdn-fi-1.comaps.app/maps/2026.06.28/261004/World.mwm
+        sha256: 77a35c16fad64252fe7dffadb8e966e8e3af906354b14df2edc1809b3e22e4a5
+        dest: data/world_mwm/261004/
       - type: file
-        url: https://cdn-fi-1.comaps.app/maps/2026.06.28/260830/WorldCoasts.mwm
-        sha256: a4d6f470b19137a624962ada2fe0d9c803e1f8925233abd3ce87a378abe2fe87
-        dest: data/world_mwm/260830/
+        url: https://cdn-fi-1.comaps.app/maps/2026.06.28/261004/WorldCoasts.mwm
+        sha256: d42a71b10c5637814468929dc4c72c2fc20f2996ce9877d697bd3dd4dc143626
+        dest: data/world_mwm/261004/
       - type: shell
         commands:
           - ./configure.sh
